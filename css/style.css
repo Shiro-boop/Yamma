@@ -1,75 +1,138 @@
-body {
-    margin: 0px;
+* {
+    margin: 0;
+    padding: 0;
     box-sizing: border-box;
-    background-color: #252424;
 }
 
-.header {
-    margin-top: -22px;
-    background-color: rgb(232, 122, 122);
+html, body {
+    height: 100%;
+    width: 100%;
+    font-size: 100%;
+    font-family: sans-serif;
+    line-height: 1.5;
 }
 
-.header a {
+img, picture, video, canvas, svg {
+    display: block;
+    max-width: 100%;
+}
+
+input, button, textarea, select {
+    font: inherit;
+}
+
+table {
+    border-collapse: collapse;
+    border-spacing: 0;
+}
+
+a {
     text-decoration: none;
-    color: rgb(255, 255, 255);
+    color: inherit;
 }
 
-.container {
-    max-width: 1200px;
-    margin: auto;
-    margin-top: -22px;
-    padding-top: 20px;
-    display: flex;
+ul, ol {
+    list-style: none;
 }
 
-.sidebar {
-    display: flex;
-    flex-direction: column;
-    border-right: 1px solid rgb(141, 133, 133);
-    padding-right: 20px;
-    margin-right: 10px;
-}
+/*-------------------------------*/
 
-.sidebar a {
-    text-decoration: none;
-    color: rgb(189, 184, 184);
-    margin-bottom: 5px;
-}
-
-.bio {
-    display: flex;
-    gap: 40px;
-}
-
-.bio__avatar {
-    max-width: 300px;
-    overflow: hidden;
-    display: flex;
-    justify-content: center;
-}
-.bio__avatar img {
+body {
+    background-color: #dedeea;
     
 }
 
-.bio__info p {
-    color: white;
+.header {
+    background-color: #8488B5;
 }
 
-.bio__info h2 {
-    color: white;
-    border-bottom: 1px solid #ffffff;
+.auth {
+    min-height: 95vh;
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
 }
 
-.wall {
-    margin-top: 40px;
+.auth::before {
+    content: '';
+    position: absolute;
+    top: 20%; /* Смещение для правильного расположения */
+    left: 37%;
+    width: 500px; /* Размер больше, чем сам элемент */
+    height: 500px;
+    border: 2px solid #8488B5; /* Граница круга */
+    border-radius: 46%; /* Превращаем в круг */
+    z-index: -1; /* Помещаем круг под основной элемент */
+    animation: rotate 6s linear 1s infinite;
+    background-color: #8488b517;
 }
 
-.wall input {
-    width: 500px;
+.auth::after {
+    content: '';
+    position: absolute;
+    top: 20%; /* Смещение для правильного расположения */
+    left: 37%;
+    width: 500px; /* Размер больше, чем сам элемент */
+    height: 500px;
+    border: 2px solid #8488B5; /* Граница круга */
+    border-radius: 46%; /* Превращаем в круг */
+    z-index: -1; /* Помещаем круг под основной элемент */
+    animation: rotate 5s linear infinite;
+    
+}
+
+@keyframes rotate {
+    0% {
+        transform: rotate(0deg);
+    }
+
+    100% {
+        transform: rotate(360deg);
+    }
+}
+
+.auth form {
+    display: flex;
+    flex-direction: column;
+    margin-bottom: 15px;
+}
+
+.auth input {
+    width: 250px;
     height: 40px;
+    margin-bottom: 5px;
+    padding-left: 10px;
+    background: transparent;
+    border: 2px solid #8488B5;
+    border-radius: 20px;
 }
 
-.wall button {
-    width: 100px;
-    height: 45px;
+.auth button {
+    width: 50%;
+    height: 40px;
+    margin: auto;
+    background: transparent;
+    border: 2px solid #8488B5;
+    border-radius: 20px;
+    transition-duration: 0.3s;
 }
+
+.auth button:hover {
+    background-color: #8488B5;
+}
+
+.auth p {
+    color: #61678b;
+}
+
+.auth a {
+    color: #61678b;
+    transition-duration: 0.3s;
+}
+
+.auth a:hover {
+    border-bottom: 1px solid #8488B5;
+}
+
