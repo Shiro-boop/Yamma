@@ -44,10 +44,17 @@ body {
 
 .header {
     background-color: #8488B5;
+    padding: 10px 10px 10px 20px;
+}
+
+.header a {
+    color: white;
+    display: block;
+    font-size: 23px;
 }
 
 .auth {
-    min-height: 95vh;
+    min-height: 94vh;
     position: relative;
     display: flex;
     flex-direction: column;
@@ -63,9 +70,9 @@ body {
     width: 500px; /* Размер больше, чем сам элемент */
     height: 500px;
     border: 2px solid #8488B5; /* Граница круга */
-    border-radius: 46%; /* Превращаем в круг */
+    border-radius: 43%; /* Превращаем в круг */
     z-index: -1; /* Помещаем круг под основной элемент */
-    animation: rotate 6s linear 1s infinite;
+    animation: rotate 10s linear 1s infinite;
     background-color: #8488b517;
 }
 
@@ -77,10 +84,23 @@ body {
     width: 500px; /* Размер больше, чем сам элемент */
     height: 500px;
     border: 2px solid #8488B5; /* Граница круга */
-    border-radius: 46%; /* Превращаем в круг */
+    border-radius: 45%; /* Превращаем в круг */
     z-index: -1; /* Помещаем круг под основной элемент */
     animation: rotate 5s linear infinite;
     
+}
+
+.auth span {
+    content: '';
+    position: absolute;
+    top: 20%; /* Смещение для правильного расположения */
+    left: 37%;
+    width: 500px; /* Размер больше, чем сам элемент */
+    height: 500px;
+    border: 2px solid #8488B5; /* Граница круга */
+    border-radius: 44%; /* Превращаем в круг */
+    z-index: -1; /* Помещаем круг под основной элемент */
+    animation: rotate 20s linear infinite;
 }
 
 @keyframes rotate {
@@ -117,6 +137,7 @@ body {
     border: 2px solid #8488B5;
     border-radius: 20px;
     transition-duration: 0.3s;
+    color: grey;
 }
 
 .auth button:hover {
@@ -127,12 +148,11 @@ body {
     color: #61678b;
 }
 
-.auth a {
+.auth_registration {
     color: #61678b;
     transition-duration: 0.3s;
 }
 
-.auth a:hover {
+.auth_registration:hover {
     border-bottom: 1px solid #8488B5;
 }
-
