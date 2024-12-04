@@ -1,0 +1,101 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html, body {
+    height: 100%;
+    width: 100%;
+    font-size: 100%;
+    font-family: sans-serif;
+    line-height: 1.5;
+}
+
+img, picture, video, canvas, svg {
+    display: block;
+    max-width: 100%;
+}
+
+input, button, textarea, select {
+    font: inherit;
+}
+
+table {
+    border-collapse: collapse;
+    border-spacing: 0;
+}
+
+a {
+    text-decoration: none;
+    color: inherit;
+}
+
+ul, ol {
+    list-style: none;
+}
+
+/*---------------------------------*/
+
+body {
+    background-color: #dedeea;
+}
+
+header {
+    background-color: #8488B5;
+    padding: 10px 20px 10px 20px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+header a {
+    color: white;
+    display: block;
+    font-size: 23px;
+}
+
+header a:last-child {
+    color: white;
+    display: block;
+    font-size: 17px;
+}
+
+main {
+    max-width: 1200px;
+    margin: auto;
+    padding-top: 20px;
+    height: 94vh;
+    display: flex;
+    gap: 10px;
+}
+
+.content {
+
+    width: 100%;
+}
+
+.sidebar {
+    display: flex;
+    width: 10%;
+    flex-direction: column;
+}
+
+.bio {
+    display: flex;
+}
+
+.bio img {
+
+}
+
+.bio_info h2 {
+    background-color: #8488B5;
+    color: white;
+    padding-left: 10px;
+    font-size: 20px;
+}
+
+.bio_info {
+    width: 100%;
+}
