@@ -53,9 +53,10 @@ body {
     font-size: 23px;
 }
 
+
+
 .auth {
-    min-height: 94vh;
-    position: relative;
+    height: 94vh;
     display: flex;
     flex-direction: column;
     justify-content: center;
@@ -65,51 +66,54 @@ body {
 .auth::before {
     content: '';
     position: absolute;
-    top: 20%; /* Смещение для правильного расположения */
-    left: 37%;
-    width: 500px; /* Размер больше, чем сам элемент */
-    height: 500px;
+    top: 50%; /* Смещение для правильного расположения */
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 50vh; /* Размер больше, чем сам элемент */
+    height: 50vh;
     border: 2px solid #8488B5; /* Граница круга */
-    border-radius: 43%; /* Превращаем в круг */
+    border-radius: 42%;
     z-index: -1; /* Помещаем круг под основной элемент */
-    animation: rotate 10s linear 1s infinite;
+    animation: rotate 20s linear infinite;
     background-color: #8488b517;
 }
 
 .auth::after {
     content: '';
     position: absolute;
-    top: 20%; /* Смещение для правильного расположения */
-    left: 37%;
-    width: 500px; /* Размер больше, чем сам элемент */
-    height: 500px;
+    top: 50%; /* Смещение для правильного расположения */
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 50vh; /* Размер больше, чем сам элемент */
+    height: 50vh;
     border: 2px solid #8488B5; /* Граница круга */
-    border-radius: 45%; /* Превращаем в круг */
+    border-radius: 40%; /* Превращаем в круг */
     z-index: -1; /* Помещаем круг под основной элемент */
-    animation: rotate 5s linear infinite;
+    animation: rotate 40s linear infinite;
     
 }
 
 .auth span {
     content: '';
     position: absolute;
-    top: 20%; /* Смещение для правильного расположения */
-    left: 37%;
-    width: 500px; /* Размер больше, чем сам элемент */
-    height: 500px;
+    top: 50%; /* Смещение для правильного расположения */
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 50vh; /* Размер больше, чем сам элемент */
+    height: 50vh;
     border: 2px solid #8488B5; /* Граница круга */
-    border-radius: 44%; /* Превращаем в круг */
+    border-radius: 38%; /* Превращаем в круг */
     z-index: -1; /* Помещаем круг под основной элемент */
-    animation: rotate 20s linear infinite;
+    animation: rotate 10s linear infinite;
 }
 
 @keyframes rotate {
     0% {
-        transform: rotate(0deg);
+        transform:translate(-50%, -50%) rotate(0deg);
     }
 
     100% {
-        transform: rotate(360deg);
+        transform:translate(-50%, -50%) rotate(360deg);
     }
 }
 
@@ -120,8 +124,8 @@ body {
 }
 
 .auth input {
-    width: 250px;
-    height: 40px;
+    width: 14em;
+    height: 3em;
     margin-bottom: 5px;
     padding-left: 10px;
     background: transparent;
@@ -156,3 +160,27 @@ body {
 .auth_registration:hover {
     border-bottom: 1px solid #8488B5;
 }
+
+
+@media (max-width: 990px) {
+    .auth::before,
+    .auth::after,
+    .auth span {
+        width: 40vh;
+        height: 40vh;
+    }
+}
+
+@media (max-width: 770px) {
+    .auth::before,
+    .auth::after,
+    .auth span {
+        width: 30vh;
+        height: 30vh;
+    }
+
+    .auth input {
+        height: 2em;
+        width: 10em;
+    }
+  }
