@@ -55,11 +55,38 @@ header a {
     font-size: 23px;
 }
 
-header a:last-child {
+.login__link {
     color: white;
     display: block;
     font-size: 17px;
 }
+
+.burger__menu {
+    display: none;
+}
+
+.burger__menu span {
+    display: block;
+    width: 100%;
+    height: 2px;
+    background-color: #dedeea;
+    border-radius: 50%;
+    transition: transform 0.3s, opacity 0.3s
+}
+
+.burger__menu.active span:nth-child(1) {
+    transform: translateY(9px) rotate(45deg);
+}
+
+.burger__menu.active span:nth-child(2) {
+    opacity: 0;
+}
+
+.burger__menu.active span:nth-child(3) {
+    transform: translateY(-9px) rotate(-45deg);
+}
+
+/*------------------------------------------*/
 
 main {
     max-width: 1200px;
@@ -125,4 +152,63 @@ main {
     padding-left: 20px;
     background: transparent;
     border: 1px solid #8488B5;
+}
+
+@media (max-width: 1400px) {
+    main {
+        max-width: 900px;
+    }
+}
+
+@media (max-width: 990px) {
+    main {
+        max-width: 700px;
+        gap: 30px;
+    }
+
+    .bio__avatar {
+        height: 500px;
+        width: 100%;
+    }
+
+    .wall input {
+        width: 100%;
+    }
+
+    .login__link {
+        display: none;
+    }
+
+    .burger__menu {
+        width: 40px;
+        height: 20px;
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+        cursor: pointer;
+    }
+
+}
+
+  @media (max-width: 770px) {
+    main {
+        margin: 0 30px 0 30px;
+    }
+
+    .sidebar {
+        display: none;
+    }
+
+    .bio__avatar {
+        height: 120px;
+        width: 200px;
+        border: 2px solid #8488B5;
+        border-radius: 50%;
+        overflow: hidden;
+    }
+
+    .bio_info h2 {
+        background-color: #dedeea;
+        color: #8488B5;
+    }
 }
